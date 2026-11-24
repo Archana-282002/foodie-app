@@ -1,6 +1,6 @@
 {
   "name": "hungry_hop",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "size": {
     "width": 3,
     "height": 3
@@ -14,5 +14,7 @@
   "allowMic": false,
   "allowGeolocation": false,
   "allowBluetooth": false,
-  "allowNFC": false
+  "allowNFC": false,
+  "id": "03772d76-85b4-4f0a-917c-c484dc6b6578",
+  "proxy id": "95518f36-7392-4324-9be8-fe8ee9c6eb56"
 }
