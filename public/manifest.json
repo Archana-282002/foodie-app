@@ -7,12 +7,269 @@
   },
   "fullpage": true,
   "mapping": [],
-  "collections": [],
+  "collections": [
+    {
+      "name": "Foodie_Users_v1",
+      "schema": {
+        "columns": [
+          { "name": "userId", "type": "STRING" },
+          { "name": "fullName", "type": "STRING" },
+          { "name": "email", "type": "STRING" },
+          { "name": "phone", "type": "STRING" },
+          { "name": "role", "type": "STRING" },
+          { "name": "savedAddresses", "type": "STRING" },
+          { "name": "dietaryPreferences", "type": "STRING" },
+          { "name": "rewardPoints", "type": "LONG" },
+          { "name": "isActive", "type": "STRING" },
+          { "name": "createdAt", "type": "DATETIME" },
+          { "name": "updatedAt", "type": "DATETIME" }
+        ]
+      },
+      "syncEnabled": false
+    },
+    {
+      "name": "Foodie_Restaurants_v1",
+      "schema": {
+        "columns": [
+          { "name": "restaurantId", "type": "STRING" },
+          { "name": "ownerId", "type": "STRING" },
+          { "name": "name", "type": "STRING" },
+          { "name": "cuisine", "type": "STRING" },
+          { "name": "city", "type": "STRING" },
+          { "name": "address", "type": "STRING" },
+          { "name": "rating", "type": "DOUBLE" },
+          { "name": "reviewCount", "type": "LONG" },
+          { "name": "imageUrl", "type": "STRING" },
+          { "name": "bannerUrl", "type": "STRING" },
+          { "name": "availabilityStatus", "type": "STRING" },
+          { "name": "closureReason", "type": "STRING" },
+          { "name": "expectedReopeningTime", "type": "DATETIME" },
+          { "name": "avgPrepTimeMinutes", "type": "LONG" },
+          { "name": "isTrainDeliveryPartner", "type": "STRING" },
+          { "name": "supportedStationCodes", "type": "STRING" },
+          { "name": "isVegOnly", "type": "STRING" },
+          { "name": "adminApprovalStatus", "type": "STRING" },
+          { "name": "createdAt", "type": "DATETIME" },
+          { "name": "updatedAt", "type": "DATETIME" }
+        ]
+      },
+      "syncEnabled": false
+    },
+    {
+      "name": "Foodie_MenuItems_v1",
+      "schema": {
+        "columns": [
+          { "name": "itemId", "type": "STRING" },
+          { "name": "restaurantId", "type": "STRING" },
+          { "name": "name", "type": "STRING" },
+          { "name": "description", "type": "STRING" },
+          { "name": "price", "type": "DOUBLE" },
+          { "name": "category", "type": "STRING" },
+          { "name": "imageUrl", "type": "STRING" },
+          { "name": "isVeg", "type": "STRING" },
+          { "name": "spiceLevel", "type": "STRING" },
+          { "name": "isAvailable", "type": "STRING" },
+          { "name": "preparationTimeMinutes", "type": "LONG" },
+          { "name": "weatherTags", "type": "STRING" },
+          { "name": "moodTags", "type": "STRING" },
+          { "name": "createdAt", "type": "DATETIME" },
+          { "name": "updatedAt", "type": "DATETIME" }
+        ]
+      },
+      "syncEnabled": false
+    },
+    {
+      "name": "Foodie_Orders_v1",
+      "schema": {
+        "columns": [
+          { "name": "orderId", "type": "STRING" },
+          { "name": "customerId", "type": "STRING" },
+          { "name": "customerName", "type": "STRING" },
+          { "name": "customerPhone", "type": "STRING" },
+          { "name": "restaurantId", "type": "STRING" },
+          { "name": "restaurantName", "type": "STRING" },
+          { "name": "deliveryPartnerId", "type": "STRING" },
+          { "name": "deliveryPartnerName", "type": "STRING" },
+          { "name": "deliveryPartnerPhone", "type": "STRING" },
+          { "name": "orderType", "type": "STRING" },
+          { "name": "orderedItemsJson", "type": "STRING" },
+          { "name": "subtotal", "type": "DOUBLE" },
+          { "name": "deliveryFee", "type": "DOUBLE" },
+          { "name": "discountAmount", "type": "DOUBLE" },
+          { "name": "taxAmount", "type": "DOUBLE" },
+          { "name": "totalAmount", "type": "DOUBLE" },
+          { "name": "appliedCouponCode", "type": "STRING" },
+          { "name": "orderStatus", "type": "STRING" },
+          { "name": "deliveryAddressJson", "type": "STRING" },
+          { "name": "trainDetailsJson", "type": "STRING" },
+          { "name": "deliveryOTP", "type": "STRING" },
+          { "name": "isOtpVerified", "type": "STRING" },
+          { "name": "paymentStatus", "type": "STRING" },
+          { "name": "paymentMethod", "type": "STRING" },
+          { "name": "estimatedDeliveryTime", "type": "DATETIME" },
+          { "name": "deliveredAt", "type": "DATETIME" },
+          { "name": "cancellationReason", "type": "STRING" },
+          { "name": "createdAt", "type": "DATETIME" },
+          { "name": "updatedAt", "type": "DATETIME" }
+        ]
+      },
+      "syncEnabled": false
+    },
+    {
+      "name": "Foodie_Coupons_v1",
+      "schema": {
+        "columns": [
+          { "name": "couponId", "type": "STRING" },
+          { "name": "code", "type": "STRING" },
+          { "name": "title", "type": "STRING" },
+          { "name": "description", "type": "STRING" },
+          { "name": "discountType", "type": "STRING" },
+          { "name": "discountValue", "type": "DOUBLE" },
+          { "name": "minOrderValue", "type": "DOUBLE" },
+          { "name": "maxDiscountAmount", "type": "DOUBLE" },
+          { "name": "applicableRestaurantId", "type": "STRING" },
+          { "name": "expiryDate", "type": "DATETIME" },
+          { "name": "usageCount", "type": "LONG" },
+          { "name": "isActive", "type": "STRING" },
+          { "name": "createdAt", "type": "DATETIME" }
+        ]
+      },
+      "syncEnabled": false
+    },
+    {
+      "name": "Foodie_Bookmarks_v1",
+      "schema": {
+        "columns": [
+          { "name": "bookmarkId", "type": "STRING" },
+          { "name": "userId", "type": "STRING" },
+          { "name": "itemType", "type": "STRING" },
+          { "name": "targetId", "type": "STRING" },
+          { "name": "categoryName", "type": "STRING" },
+          { "name": "createdAt", "type": "DATETIME" }
+        ]
+      },
+      "syncEnabled": false
+    },
+    {
+      "name": "Foodie_Reviews_v1",
+      "schema": {
+        "columns": [
+          { "name": "reviewId", "type": "STRING" },
+          { "name": "orderId", "type": "STRING" },
+          { "name": "customerId", "type": "STRING" },
+          { "name": "customerName", "type": "STRING" },
+          { "name": "restaurantId", "type": "STRING" },
+          { "name": "foodRating", "type": "DOUBLE" },
+          { "name": "deliveryRating", "type": "DOUBLE" },
+          { "name": "comment", "type": "STRING" },
+          { "name": "createdAt", "type": "DATETIME" }
+        ]
+      },
+      "syncEnabled": false
+    },
+    {
+      "name": "Foodie_TrainOrders_v1",
+      "schema": {
+        "columns": [
+          { "name": "trainOrderId", "type": "STRING" },
+          { "name": "orderId", "type": "STRING" },
+          { "name": "pnrNumber", "type": "STRING" },
+          { "name": "trainNumber", "type": "STRING" },
+          { "name": "trainName", "type": "STRING" },
+          { "name": "stationCode", "type": "STRING" },
+          { "name": "stationName", "type": "STRING" },
+          { "name": "journeyDate", "type": "DATETIME" },
+          { "name": "coach", "type": "STRING" },
+          { "name": "seatNumber", "type": "STRING" },
+          { "name": "deliveryWindowStatus", "type": "STRING" },
+          { "name": "createdAt", "type": "DATETIME" }
+        ]
+      },
+      "syncEnabled": false
+    },
+    {
+      "name": "Foodie_DeliveryPartnerProfiles_v1",
+      "schema": {
+        "columns": [
+          { "name": "partnerId", "type": "STRING" },
+          { "name": "userId", "type": "STRING" },
+          { "name": "fullName", "type": "STRING" },
+          { "name": "phone", "type": "STRING" },
+          { "name": "vehicleType", "type": "STRING" },
+          { "name": "availabilityStatus", "type": "STRING" },
+          { "name": "currentLatitude", "type": "DOUBLE" },
+          { "name": "currentLongitude", "type": "DOUBLE" },
+          { "name": "activeOrderId", "type": "STRING" },
+          { "name": "totalEarnings", "type": "DOUBLE" },
+          { "name": "completedTrips", "type": "LONG" },
+          { "name": "rating", "type": "DOUBLE" },
+          { "name": "updatedAt", "type": "DATETIME" }
+        ]
+      },
+      "syncEnabled": false
+    },
+    {
+      "name": "Foodie_GroupOrders_v1",
+      "schema": {
+        "columns": [
+          { "name": "groupOrderId", "type": "STRING" },
+          { "name": "hostCustomerId", "type": "STRING" },
+          { "name": "groupName", "type": "STRING" },
+          { "name": "shareCode", "type": "STRING" },
+          { "name": "restaurantId", "type": "STRING" },
+          { "name": "membersJson", "type": "STRING" },
+          { "name": "sharedCartJson", "type": "STRING" },
+          { "name": "splitDetailsJson", "type": "STRING" },
+          { "name": "status", "type": "STRING" },
+          { "name": "associatedOrderId", "type": "STRING" },
+          { "name": "createdAt", "type": "DATETIME" },
+          { "name": "updatedAt", "type": "DATETIME" }
+        ]
+      },
+      "syncEnabled": false
+    },
+    {
+      "name": "Foodie_Complaints_v1",
+      "schema": {
+        "columns": [
+          { "name": "complaintId", "type": "STRING" },
+          { "name": "orderId", "type": "STRING" },
+          { "name": "customerId", "type": "STRING" },
+          { "name": "restaurantId", "type": "STRING" },
+          { "name": "complaintType", "type": "STRING" },
+          { "name": "description", "type": "STRING" },
+          { "status": "STRING", "name": "status" },
+          { "name": "refundAmount", "type": "DOUBLE" },
+          { "name": "resolvedByAdminId", "type": "STRING" },
+          { "name": "resolutionNotes", "type": "STRING" },
+          { "name": "createdAt", "type": "DATETIME" },
+          { "name": "updatedAt", "type": "DATETIME" }
+        ]
+      },
+      "syncEnabled": false
+    },
+    {
+      "name": "Foodie_RestaurantStatusLogs_v1",
+      "schema": {
+        "columns": [
+          { "name": "logId", "type": "STRING" },
+          { "name": "restaurantId", "type": "STRING" },
+          { "name": "previousStatus", "type": "STRING" },
+          { "name": "newStatus", "type": "STRING" },
+          { "name": "reason", "type": "STRING" },
+          { "name": "expectedReopenTime", "type": "DATETIME" },
+          { "name": "changedByUserId", "type": "STRING" },
+          { "name": "createdAt", "type": "DATETIME" }
+        ]
+      },
+      "syncEnabled": false
+    }
+  ],
   "workflowMapping": [],
   "packagesMapping": [],
   "allowCamera": false,
   "allowMic": false,
-  "allowGeolocation": false,
+  "allowGeolocation": true,
   "allowBluetooth": false,
   "allowNFC": false,
   "id": "03772d76-85b4-4f0a-917c-c484dc6b6578",
