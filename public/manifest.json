@@ -1,0 +1,18 @@
+{
+  "name": "hungry_hop",
+  "version": "0.0.1",
+  "size": {
+    "width": 3,
+    "height": 3
+  },
+  "fullpage": true,
+  "mapping": [],
+  "collections": [],
+  "workflowMapping": [],
+  "packagesMapping": [],
+  "allowCamera": false,
+  "allowMic": false,
+  "allowGeolocation": false,
+  "allowBluetooth": false,
+  "allowNFC": false
+}
